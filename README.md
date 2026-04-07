@@ -9,7 +9,7 @@
 
 
 🚀 Overview
-  *  A fast and reliable utility designed to convert your audio files into high-quality 320kbps MP3s. Built with a focus on speed and a cyberpunk-inspired aesthetic.
+  *  A fast and reliable stand-alone program utility designed to convert your audio files into high-quality 320kbps MP3s. Built with a focus on speed and a cyberpunk-inspired aesthetic.
 
 🛠️ Key Features
   *  Drag & Drop: Simple and intuitive workflow.
@@ -32,7 +32,7 @@
 ## Portuguese ##
  
 🚀 Visão Geral
-  * Um utilitário rápido e confiável projetado para converter seus arquivos de áudio em MP3s de alta qualidade a 320kbps. Criado com foco na agilidade e com uma estética inspirada no estilo cyberpunk.
+  * Um programa utilitário rápido e confiável projetado para converter seus arquivos de áudio em MP3s de alta qualidade a 320kbps. Criado com foco na agilidade e com uma estética inspirada no estilo cyberpunk.
 
 🛠️ Funcionalidades Principais
   *  Arrastar e Soltar: Fluxo de trabalho simples e intuitivo.
