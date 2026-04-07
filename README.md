@@ -1,6 +1,6 @@
 # 🛸 320 MP3 Fast Encoder v1.0
 > **High-Performance MP3 Transcoder** | Coded by **OG L**
-👉 [**Official Website**](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
+👉 [*Official Website DOWNLOAD*](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
 
 [English](#english) | [Português](#portuguese)
 
@@ -55,7 +55,7 @@
 
 
  Acesse a página do projeto para baixar o instalador mais recente:
-  👉 [**Official Website**](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
+  👉 [**Official Website Download**](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
 
 **Contact / Donate Paypal: `oglcontato@gmail.com`
 *Developed in Brasília, DF - Brazil*
