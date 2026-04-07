@@ -2,7 +2,7 @@
 > **High-Performance MP3 Transcoder** | Coded by **OG L**
 👉 [**Official Website**](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
 
-[English](#english) | [Português](#português)
+[English](#english) | [Português](#portuguese)
 
 
 ## English ##
