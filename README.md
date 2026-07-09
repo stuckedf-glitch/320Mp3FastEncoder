@@ -1,62 +1,110 @@
-# 🛸 320 MP3 Fast Encoder v1.0
-> **High-Performance MP3 Transcoder** |
-👉 [*Official Website DOWNLOAD*](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
+# 320 MP3 Fast Encoder v1.0
 
-[English](#english) | [Português](#portuguese)
+**High-performance standalone MP3 transcoder by OG Plugins.**
 
+[Official Website / Download](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
 
-## Downloads ##
-  *  Windows Installer: [320FastEncodeR_Setup_1.0_Windows.exe](downloads/320FastEncodeR_Setup_1.0_Windows.exe)
-  *  macOS Installer: [320FastEncodeR_Installer_1.0_Mac.dmg](downloads/320FastEncodeR_Installer_1.0_Mac.dmg)
+[English](#english) | [Portugues](#portugues)
 
-## English ##
-🚀 Overview
-  *  A fast and reliable stand-alone program utility designed to convert your audio files into high-quality 320kbps MP3s. Built with a focus on speed and a cyberpunk-inspired aesthetic.
+## Downloads
 
-🛠️ Key Features
-  *  Drag & Drop: Simple and intuitive workflow.
-  *  Futuristic UI: Clean, neon-themed interface.
-  *  Threads: Fast conversion with dynamic thread management via FFmpeg, ensuring audio processing occurs in the background without freezing the UI, optimizing multi-core CPU usage for maximum transcoding speed.
+- Windows Installer: [320FastEncodeR_Setup_1.0_Windows.exe](downloads/320FastEncodeR_Setup_1.0_Windows.exe)
+- macOS Installer: [320FastEncodeR_Installer_1.0_Mac.dmg](downloads/320FastEncodeR_Installer_1.0_Mac.dmg)
 
-📖 Manual & Quick Start
-  *  Input: Drag your WAV · AIFF · AIF · MP3 · FLAC · ALAC · M4A · AAC · OGG · WMA · MPEG · MPG files directly into the interface.
-  *  Metadata: Edit ID3 tags as desired. Note: All tracks in the list will be edited according to the fields provided.
-  *  Process: Click the green PLAY icon to start. If you need to abort or stop, use the red square STOP button.
-  *  Output: Your new 320kbps MP3 will be generated in the same folder as the original file.
+## Freeware License
 
-⚙️ Technical Specifications
-  *  Core Engine: Transcoding based on FFmpeg / Lame 3.10.
-  *  Bitrate: Constant Bit Rate (CBR) with no filters applied.
-  *  Sample Rate: Supports 44.1kHz / 48kHz.
-  *  Architecture: Available for Windows 10/11 (x64) and macOS.
+320 MP3 Fast Encoder is distributed under a free-to-use freeware license.
 
+- Free to download and use.
+- Free for personal and professional audio work.
+- No subscription, activation, ads, or hidden usage limits.
+- Files generated with the software belong to the user.
+- OG Plugins keeps the copyright, brand, installer, and official binaries.
+- Do not sell, repackage, or redistribute modified installers without permission from OG Plugins.
 
-## Portuguese ##
- 
-🚀 Visão Geral
-  * Um programa utilitário rápido e confiável projetado para converter seus arquivos de áudio em MP3s de alta qualidade a 320kbps. Criado com foco na agilidade e com uma estética inspirada no estilo cyberpunk.
+## English
 
-🛠️ Funcionalidades Principais
-  *  Arrastar e Soltar: Fluxo de trabalho simples e intuitivo.
-  *  Interface Futurista: Visual limpo com tema neon.
-  *  Threads: Conversão Rápida e gerenciamento dinâmico de threads via FFmpeg, garantindo que o processamento de áudio ocorra em segundo plano, sem travar a interface visual, otimizando o uso de múltiplos núcleos do CPU para máxima velocidade de transcodificação."
- 
+### Overview
 
-📖 Manual e Início Rápido
-  *  Entrada: Arraste seus arquivos WAV · AIFF · AIF · MP3 · FLAC · ALAC · M4A · AAC · OGG · WMA · MPEG · MPG diretamente para a interface.
-  *  Metadados: Edite a gosto o ID3. Obs: Todas as faixas da lista serão editadas conforme os campos.
-  *  Processar: Clique no icone verde PLAY para iniciar, caso precise abortar ou parar  use butão de "STOP" quadrado vermelho
-  *  Saída: Seu novo MP3 de 320kbps será gerado na mesma pasta do arquivo original.
- 
+320 MP3 Fast Encoder is a fast, lightweight standalone utility designed to convert audio files into high-quality 320kbps MP3 files. It focuses on speed, simple operation, batch workflow, and a cyberpunk-inspired interface.
 
-⚙️ Especificações Técnicas
-   *  Motor Principal: Transcodificação baseada em FFmpeg/Lame3.10
-   *  Bitrate: Taxa de Bits Constante (CBR) e sem aplicação de filtros.
-   *  Taxa de Amostragem: Suporte para 44.1kHz / 48kHz.
-   *  Arquitetura: Disponível para Windows 10/11 (x64) e macOS.
+### Main Features
 
+- Drag and drop audio files directly into the app.
+- Convert multiple files in a batch queue.
+- Output fixed 320kbps CBR MP3 files.
+- Uses FFmpeg / LAME for reliable transcoding.
+- Runs conversion in the background so the interface stays responsive.
+- Includes an ID3v1 multi-editor for batch metadata.
+- Preserves a fast, simple workflow with no account or subscription.
 
- Acesse a página do projeto para baixar o instalador mais recente:
-  👉 [**Official Website Download**](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
+### Supported Input Formats
 
+WAV, AIFF, AIF, MP3, FLAC, ALAC, M4A, AAC, OGG, WMA, MPEG, MPG.
 
+### Output
+
+- Format: MP3
+- Bitrate: 320kbps CBR
+- Tags: ID3v1 metadata
+- Destination: the same folder as the original file
+
+### ID3v1 Multi-Editor
+
+The metadata editor can set Title, Artist, Album, Track, Year, Genre, BPM, Encoded by, and Comment. When applied, all tracks currently in the window are edited according to the fields entered by the user.
+
+### Platforms
+
+- Windows 10/11 x64
+- macOS
+
+### Privacy And Installer Notice
+
+The installer includes EULA and Privacy Notice screens. Standard installation and uninstallation telemetry may be collected as described in those documents.
+
+## Portugues
+
+### Visao Geral
+
+320 MP3 Fast Encoder e um utilitario standalone rapido e leve, criado para converter arquivos de audio em MP3 de alta qualidade a 320kbps. O foco e velocidade, operacao simples, processamento em lote e uma interface inspirada no estilo cyberpunk.
+
+### Principais Funcoes
+
+- Arraste e solte arquivos de audio diretamente no app.
+- Converta varios arquivos em fila/lote.
+- Gere MP3 fixo em 320kbps CBR.
+- Usa FFmpeg / LAME para transcodificacao confiavel.
+- A conversao roda em segundo plano para nao travar a interface.
+- Inclui multi-editor ID3v1 para metadados em lote.
+- Fluxo rapido e simples, sem conta, assinatura ou ativacao.
+
+### Formatos De Entrada Suportados
+
+WAV, AIFF, AIF, MP3, FLAC, ALAC, M4A, AAC, OGG, WMA, MPEG, MPG.
+
+### Saida
+
+- Formato: MP3
+- Bitrate: 320kbps CBR
+- Tags: metadados ID3v1
+- Destino: mesma pasta do arquivo original
+
+### ID3v1 Multi-Editor
+
+O editor de metadados permite definir Title, Artist, Album, Track, Year, Genre, BPM, Encoded by e Comment. Ao aplicar, todas as faixas que estiverem na janela serao editadas de acordo com os campos preenchidos pelo usuario.
+
+### Plataformas
+
+- Windows 10/11 x64
+- macOS
+
+### Privacidade E Instalador
+
+O instalador exibe EULA e Privacy Notice. Telemetria padrao de instalacao e desinstalacao pode ser coletada conforme descrito nesses documentos.
+
+## Official Links
+
+- Website: [stuckedf-glitch.github.io/320Mp3FastEncoder](https://stuckedf-glitch.github.io/320Mp3FastEncoder/)
+- Developer: OG Plugins
+- Version: 1.0
+- License: Freeware license
