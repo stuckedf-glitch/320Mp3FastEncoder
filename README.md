@@ -5,9 +5,11 @@
 [English](#english) | [Português](#portuguese)
 
 
+## Downloads ##
+  *  Windows Installer: [320FastEncodeR_Setup_1.0_Windows.exe](downloads/320FastEncodeR_Setup_1.0_Windows.exe)
+  *  macOS Installer: [320FastEncodeR_Installer_1.0_Mac.dmg](downloads/320FastEncodeR_Installer_1.0_Mac.dmg)
+
 ## English ##
-
-
 🚀 Overview
   *  A fast and reliable stand-alone program utility designed to convert your audio files into high-quality 320kbps MP3s. Built with a focus on speed and a cyberpunk-inspired aesthetic.
 
@@ -17,7 +19,7 @@
   *  Threads: Fast conversion with dynamic thread management via FFmpeg, ensuring audio processing occurs in the background without freezing the UI, optimizing multi-core CPU usage for maximum transcoding speed.
 
 📖 Manual & Quick Start
-  *  Input: Drag your WAV · AIFF · FLAC · ALAC · OGG · WMA · AAC · MP3 files directly into the interface.
+  *  Input: Drag your WAV · AIFF · AIF · MP3 · FLAC · ALAC · M4A · AAC · OGG · WMA · MPEG · MPG files directly into the interface.
   *  Metadata: Edit ID3 tags as desired. Note: All tracks in the list will be edited according to the fields provided.
   *  Process: Click the green PLAY icon to start. If you need to abort or stop, use the red square STOP button.
   *  Output: Your new 320kbps MP3 will be generated in the same folder as the original file.
@@ -26,7 +28,7 @@
   *  Core Engine: Transcoding based on FFmpeg / Lame 3.10.
   *  Bitrate: Constant Bit Rate (CBR) with no filters applied.
   *  Sample Rate: Supports 44.1kHz / 48kHz.
-  *  Architecture: Optimized for Windows 10/11 (x64).
+  *  Architecture: Available for Windows 10/11 (x64) and macOS.
 
 
 ## Portuguese ##
@@ -41,7 +43,7 @@
  
 
 📖 Manual e Início Rápido
-  *  Entrada: Arraste seus arquivos WAV · AIFF · FLAC · ALAC · OGG · WMA · AAC · MP3 diretamente para a interface.
+  *  Entrada: Arraste seus arquivos WAV · AIFF · AIF · MP3 · FLAC · ALAC · M4A · AAC · OGG · WMA · MPEG · MPG diretamente para a interface.
   *  Metadados: Edite a gosto o ID3. Obs: Todas as faixas da lista serão editadas conforme os campos.
   *  Processar: Clique no icone verde PLAY para iniciar, caso precise abortar ou parar  use butão de "STOP" quadrado vermelho
   *  Saída: Seu novo MP3 de 320kbps será gerado na mesma pasta do arquivo original.
@@ -51,7 +53,7 @@
    *  Motor Principal: Transcodificação baseada em FFmpeg/Lame3.10
    *  Bitrate: Taxa de Bits Constante (CBR) e sem aplicação de filtros.
    *  Taxa de Amostragem: Suporte para 44.1kHz / 48kHz.
-   *  Arquitetura: Otimizado para Windows 10/11 (x64).
+   *  Arquitetura: Disponível para Windows 10/11 (x64) e macOS.
 
 
  Acesse a página do projeto para baixar o instalador mais recente:

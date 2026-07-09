@@ -208,6 +208,8 @@ hr.div {
   border:1px solid var(--border); padding:4px 16px; margin-bottom:22px; opacity:0.75;
 }
 .dl-meta { margin-top:18px; font-size:0.75rem; opacity:0.45; font-family:'Share Tech Mono',monospace; letter-spacing:2px; }
+.dl-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:8px; }
+.dl-actions .btn-dl { margin-top:0; min-width:230px; justify-content:center; }
 
 /* ── DONATE ── */
 #donate { text-align:center; }
@@ -255,7 +257,9 @@ footer {
 }
 
 @media(max-width:600px){
-  .dl-box, .donate-box { padding:32px 20px; }
+  .dl-actions { flex-direction:column; align-items:stretch; }
+  .dl-actions .btn-dl { width:100%; min-width:0; padding-left:20px; padding-right:20px; justify-content:center; }
+.dl-box, .donate-box { padding:32px 20px; }
   section { padding:56px 16px; }
 }
 </style>
@@ -271,9 +275,9 @@ footer {
     <div class="logo-mp3">MP3</div>
     <div class="logo-fast">FAST ENCODER</div>
   </div>
-  <p class="hero-sub">Version 1.001 &nbsp;·&nbsp; April 2026</p>
+  <p class="hero-sub">Version 1.0 &nbsp;·&nbsp; July 2026</p>
   <p class="hero-tagline">Speed, precision, and fidelity — free forever.</p>
-  <p class="hero-formats">Support Files: WAV · AIFF · FLAC · ALAC · OGG · WMA · AAC · MP3</p>
+  <p class="hero-formats">Support Files: WAV · AIFF · AIF · MP3 · FLAC · ALAC · M4A · AAC · OGG · WMA · MPEG · MPG</p>
 
   <a class="btn-dl" href=" #download">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -301,7 +305,7 @@ footer {
     <div class="feat-card">
       <div class="feat-icon">🔁</div>
       <div class="feat-title">Batch Processing</div>
-      <p class="feat-text">Drop multiple files at once. The engine queues and converts them all — WAV, AIFF, FLAC, ALAC, OGG, WMA, AAC, and MP3.</p>
+      <p class="feat-text">Drop multiple files at once. The engine queues and converts them all — WAV, AIFF, AIF, MP3, FLAC, ALAC, M4A, AAC, OGG, WMA, MPEG, and MPG.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">🧵</div>
@@ -337,7 +341,7 @@ footer {
     <h3>Interface &amp; Navigation</h3>
     <ul>
       <li><strong style="color:#fff;">Drag &amp; Drop</strong> — Drop files onto the central area (dotted rectangle). Accepts multiple files simultaneously.</li>
-      <li><strong style="color:#fff;">Manual Selection</strong> — Click the center area to open Windows File Explorer.</li>
+      <li><strong style="color:#fff;">Manual Selection</strong> — Click the center area to open the system file picker.</li>
       <li><strong style="color:#fff;">▶ Play</strong> — Starts the conversion queue.</li>
       <li><strong style="color:#fff;">■ Stop</strong> — Immediately interrupts the current process and clears the queue.</li>
       <li><strong style="color:#fff;">✎ Tags</strong> — Opens the ID3v1 metadata editor for batch application.</li>
@@ -383,11 +387,11 @@ footer {
     <tr><td>COMPRESSION</td><td>CBR (Constant Bitrate) fixed at 320kbps</td></tr>
     <tr><td>THREADING</td><td><span class="tag">-threads 0</span> — FFmpeg auto-selects optimal CPU core count</td></tr>
     <tr><td>UI THREAD</td><td>Conversion engine runs isolated from the interface thread</td></tr>
-    <tr><td>SUPPORTED FORMATS</td><td>WAV · AIFF · MP3 · FLAC · ALAC · M4A (AAC) · OGG · WMA</td></tr>
+    <tr><td>SUPPORTED FORMATS</td><td>WAV · AIFF · AIF · MP3 · FLAC · ALAC · M4A · AAC · OGG · WMA · MPEG · MPG</td></tr>
     <tr><td>OUTPUT FORMAT</td><td>MP3 · 320kbps CBR · ID3v1 tags</td></tr>
-    <tr><td>PLATFORM</td><td>Windows</td></tr>
-    <tr><td>VERSION</td><td>1.0 — April 2026</td></tr>
-    <tr><td>DISTRIBUTION</td><td>U-235 ® · Developer: OG L</td></tr>
+    <tr><td>PLATFORM</td><td>Windows 10/11 (x64) · macOS</td></tr>
+    <tr><td>VERSION</td><td>1.0 — July 2026</td></tr>
+    <tr><td>DISTRIBUTION</td><td>OG Plugins · Developer: OG Plugins</td></tr>
     <tr><td>LICENSE</td><td>Free — No restrictions</td></tr>
   </table>
 </section>
@@ -399,17 +403,27 @@ footer {
   <div class="sec-label">// Get the Software</div>
   <div class="sec-title">Download</div>
   <div class="dl-box">
-    <div class="ver-badge">VERSION 1.001 — STABLE</div>
+    <div class="ver-badge">VERSION 1.0 — STABLE</div>
     <p style="font-size:0.88rem;opacity:0.55;margin-bottom:26px;font-family:'Share Tech Mono',monospace;letter-spacing:1px;"></p>
-    <a class="btn-dl" href="https://github.com/stuckedf-glitch/320Mp3FastEncoder/releases/download/V1.001/320mp3FastEncoder_Setup_v1.0.zip" download>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-        <polyline points="7 10 12 15 17 10"/>
-        <line x1="12" y1="15" x2="12" y2="3"/>
-      </svg>
-      Download Installer
-    </a>
-    <p class="dl-meta">320MP3FastEncoder_Setup.zip &nbsp;·&nbsp; Windows</p>
+    <div class="dl-actions">
+      <a class="btn-dl" href="downloads/320FastEncodeR_Setup_1.0_Windows.exe" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download for Windows
+      </a>
+      <a class="btn-dl" href="downloads/320FastEncodeR_Installer_1.0_Mac.dmg" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download for macOS
+      </a>
+    </div>
+    <p class="dl-meta">Windows 10/11 (x64) &nbsp;·&nbsp; macOS &nbsp;·&nbsp; Version 1.0</p>
   </div>
 </section>
 
@@ -435,7 +449,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  320 MP3 FAST ENCODER &nbsp;·&nbsp; VERSION 1.001 &nbsp;·&nbsp; APRIL 2026 &nbsp;·&nbsp; DISTRIBUTION: U-235 ® &nbsp;·&nbsp; DEVELOPER: OG L &nbsp;·&nbsp; FREE SOFTWARE
+  320 MP3 FAST ENCODER &nbsp;·&nbsp; VERSION 1.0 &nbsp;·&nbsp; JULY 2026 &nbsp;·&nbsp; DISTRIBUTION: OG Plugins &nbsp;·&nbsp; DEVELOPER: OG Plugins &nbsp;·&nbsp; FREE SOFTWARE
 </footer>
 
 </body>
