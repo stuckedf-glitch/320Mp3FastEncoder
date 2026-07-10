@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">320 MP3 Fast Encoder local benchmark</title>
+  <desc id="desc">3 minute WAV converted to 320kbps MP3 in 3.35 seconds average, 53.8 times realtime, local benchmark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05080d"/>
+      <stop offset="0.52" stop-color="#07131d"/>
+      <stop offset="1" stop-color="#05080d"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00d6ff" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#00d6ff"/>
+      <stop offset="1" stop-color="#00f0a8"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect x="20" y="20" width="1160" height="380" rx="18" fill="none" stroke="#00d6ff" stroke-opacity="0.28"/>
+  <g opacity="0.25" stroke="#00d6ff" stroke-width="1">
+    <path d="M70 84H1130M70 140H1130M70 196H1130M70 252H1130M70 308H1130"/>
+    <path d="M140 54V356M250 54V356M360 54V356M470 54V356M580 54V356M690 54V356M800 54V356M910 54V356M1020 54V356"/>
+  </g>
+  <path d="M70 246 C115 198 135 190 162 246 S220 305 248 246 S305 188 334 246 S392 306 420 246 S478 187 506 246 S565 304 592 246 S650 188 678 246 S736 305 764 246 S822 188 850 246 S908 304 936 246 S994 188 1022 246 S1080 304 1130 246" fill="none" stroke="#00d6ff" stroke-width="4" stroke-opacity="0.72" filter="url(#glow)"/>
+  <text x="72" y="76" fill="#00d6ff" font-family="Consolas, 'Share Tech Mono', monospace" font-size="24" letter-spacing="4">LOCAL SPEED BENCHMARK</text>
+  <text x="72" y="134" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="42" font-weight="800">3:00 WAV -&gt; 320kbps MP3</text>
+  <text x="72" y="176" fill="#a7f3ff" font-family="Consolas, monospace" font-size="21">PCM 16-bit stereo 44.1kHz | libmp3lame | CBR | no filters | 5 runs</text>
+  <g transform="translate(72 228)">
+    <rect width="300" height="116" rx="12" fill="#03151e" stroke="#00d6ff" stroke-opacity="0.55"/>
+    <text x="24" y="42" fill="#90eaff" font-family="Consolas, monospace" font-size="18" letter-spacing="2">AVERAGE TIME</text>
+    <text x="24" y="92" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="52" font-weight="900">3.35s</text>
+  </g>
+  <g transform="translate(402 228)">
+    <rect width="300" height="116" rx="12" fill="#03151e" stroke="#00f0a8" stroke-opacity="0.55"/>
+    <text x="24" y="42" fill="#8fffe1" font-family="Consolas, monospace" font-size="18" letter-spacing="2">REALTIME SPEED</text>
+    <text x="24" y="92" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="52" font-weight="900">53.8x</text>
+  </g>
+  <g transform="translate(732 228)">
+    <rect width="396" height="116" rx="12" fill="#03151e" stroke="#f5c84b" stroke-opacity="0.58"/>
+    <text x="24" y="42" fill="#ffe08a" font-family="Consolas, monospace" font-size="18" letter-spacing="2">BEST / WORST</text>
+    <text x="24" y="92" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="46" font-weight="900">3.25s / 3.43s</text>
+  </g>
+  <text x="72" y="378" fill="#7f98a8" font-family="Consolas, monospace" font-size="17">Test machine: Intel Core i7-6700K, Windows 10 Pro. Results vary by CPU, storage, source file, and system load.</text>
+</svg>

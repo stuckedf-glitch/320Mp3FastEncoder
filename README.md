@@ -11,6 +11,11 @@
 - Windows Installer: [320FastEncodeR_Setup_1.0_Windows.exe](downloads/320FastEncodeR_Setup_1.0_Windows.exe)
 - macOS Installer: [320FastEncodeR_Installer_1.0_Mac.dmg](downloads/320FastEncodeR_Installer_1.0_Mac.dmg)
 
+## Local Benchmark
+
+![320 MP3 Fast Encoder local benchmark](assets/benchmark-3min-wav.svg)
+
+Test file: 3:00 WAV PCM 16-bit stereo 44.1kHz converted to MP3 320kbps CBR with libmp3lame and no filters. Measured in 5 runs on Intel Core i7-6700K / Windows 10 Pro. Average: 3.35 seconds. Best: 3.25 seconds. Worst: 3.43 seconds. Speed: 53.8x realtime. Results vary by CPU, storage, source file, and system load.
 ## Freeware License
 
 320 MP3 Fast Encoder is distributed under a free-to-use freeware license.
@@ -55,8 +60,8 @@ The metadata editor can set Title, Artist, Album, Track, Year, Genre, BPM, Encod
 
 ### Platforms
 
-- Windows 10/11 x64
-- macOS
+- Windows 10/11 (64-bit)
+- macOS 10.15 Catalina or later
 
 ### Privacy And Installer Notice
 
@@ -95,8 +100,8 @@ O editor de metadados permite definir Title, Artist, Album, Track, Year, Genre, 
 
 ### Plataformas
 
-- Windows 10/11 x64
-- macOS
+- Windows 10/11 (64-bit)
+- macOS 10.15 Catalina or later
 
 ### Privacidade E Instalador
 
