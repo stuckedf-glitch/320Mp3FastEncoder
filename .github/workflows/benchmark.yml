@@ -1,0 +1,161 @@
+name: Conversion Benchmark
+
+on:
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    name: ${{ matrix.label }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            label: Windows runner
+          - os: macos-latest
+            label: macOS runner
+          - os: ubuntu-latest
+            label: Ubuntu runner
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install FFmpeg on Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: choco install ffmpeg -y --no-progress
+
+      - name: Install FFmpeg on Ubuntu
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install FFmpeg on macOS
+        if: runner.os == 'macOS'
+        shell: bash
+        run: brew install ffmpeg
+
+      - name: Run 3-minute WAV benchmark
+        shell: python
+        run: |
+          import csv
+          import json
+          import os
+          import platform
+          import shutil
+          import statistics
+          import subprocess
+          import time
+          from pathlib import Path
+
+          out_dir = Path('benchmark-results')
+          out_dir.mkdir(exist_ok=True)
+          input_wav = out_dir / 'benchmark_3min_44k16_stereo.wav'
+          ffmpeg = shutil.which('ffmpeg')
+          if not ffmpeg:
+              raise SystemExit('ffmpeg not found')
+
+          def run(cmd):
+              subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+          run([
+              ffmpeg, '-y',
+              '-f', 'lavfi', '-i', 'sine=frequency=997:duration=180:sample_rate=44100',
+              '-f', 'lavfi', '-i', 'sine=frequency=1493:duration=180:sample_rate=44100',
+              '-filter_complex', '[0:a][1:a]amerge=inputs=2',
+              '-ac', '2', '-c:a', 'pcm_s16le', str(input_wav),
+          ])
+
+          def cpu_name():
+              system = platform.system()
+              try:
+                  if system == 'Windows':
+                      text = subprocess.check_output(['powershell', '-NoProfile', '-Command', '(Get-CimInstance Win32_Processor | Select-Object -First 1).Name'], text=True, stderr=subprocess.DEVNULL).strip()
+                      return text or platform.processor()
+                  if system == 'Darwin':
+                      return subprocess.check_output(['sysctl', '-n', 'machdep.cpu.brand_string'], text=True).strip()
+                  if system == 'Linux':
+                      for line in Path('/proc/cpuinfo').read_text(errors='ignore').splitlines():
+                          if line.lower().startswith('model name'):
+                              return line.split(':', 1)[1].strip()
+              except Exception:
+                  pass
+              return platform.processor() or platform.machine()
+
+          rows = []
+          for i in range(1, 6):
+              output = out_dir / f'benchmark_run_{i}.mp3'
+              if output.exists():
+                  output.unlink()
+              cmd = [
+                  ffmpeg, '-y', '-i', str(input_wav), '-progress', 'pipe:1',
+                  '-c:a', 'libmp3lame', '-b:a', '320k',
+                  '-metadata', 'comment=320 MP3 FAST ENCODER by OG Plugins',
+                  str(output),
+              ]
+              start = time.perf_counter()
+              subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+              elapsed = time.perf_counter() - start
+              rows.append({'run': i, 'seconds': round(elapsed, 3), 'output_bytes': output.stat().st_size})
+
+          seconds = [r['seconds'] for r in rows]
+          avg = round(statistics.mean(seconds), 3)
+          best = round(min(seconds), 3)
+          worst = round(max(seconds), 3)
+          speed = round(180 / avg, 1)
+          runner_os = os.environ.get('RUNNER_OS', platform.system())
+          runner_name = os.environ.get('RUNNER_NAME', '')
+          summary = {
+              'runner_os': runner_os,
+              'runner_name': runner_name,
+              'platform': platform.platform(),
+              'cpu': cpu_name(),
+              'ffmpeg': subprocess.check_output([ffmpeg, '-version'], text=True, stderr=subprocess.STDOUT).splitlines()[0],
+              'input': '3:00 WAV PCM 16-bit stereo 44.1kHz',
+              'conversion': 'MP3 320kbps CBR libmp3lame, no filters',
+              'runs': len(rows),
+              'average_seconds': avg,
+              'best_seconds': best,
+              'worst_seconds': worst,
+              'realtime_speed': f'{speed}x',
+              'rows': rows,
+          }
+
+          safe_name = runner_os.lower().replace(' ', '-')
+          (out_dir / f'{safe_name}.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
+          with (out_dir / f'{safe_name}.csv').open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=['run', 'seconds', 'output_bytes'])
+              writer.writeheader()
+              writer.writerows(rows)
+          md = [
+              f"# {runner_os} benchmark",
+              '',
+              f"- Average: {avg}s",
+              f"- Best: {best}s",
+              f"- Worst: {worst}s",
+              f"- Realtime speed: {speed}x",
+              f"- CPU: {summary['cpu']}",
+              f"- Platform: {summary['platform']}",
+              f"- FFmpeg: {summary['ffmpeg']}",
+              '',
+              'Runs:',
+          ]
+          md.extend([f"- Run {r['run']}: {r['seconds']}s" for r in rows])
+          (out_dir / f'{safe_name}.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
+          print(json.dumps(summary, indent=2))
+
+      - name: Upload benchmark artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-${{ runner.os }}
+          path: benchmark-results/*
+          if-no-files-found: error
