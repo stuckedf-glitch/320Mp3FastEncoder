@@ -6,14 +6,9 @@
 
 [English](#english) | [Portugues](#portugues)
 
-## Downloads
-
-- Windows Installer: [320FastEncodeR_Setup_1.0_Windows.exe](downloads/320FastEncodeR_Setup_1.0_Windows.exe)
-- macOS Installer: [320FastEncodeR_Installer_1.0_Mac.dmg](downloads/320FastEncodeR_Installer_1.0_Mac.dmg)
 
 ## Benchmark Results
 
-![320 MP3 Fast Encoder local benchmark](assets/benchmark-3min-wav.svg)
 
 ![320 MP3 Fast Encoder benchmark comparison](assets/benchmark-comparison.svg)
 
@@ -24,7 +19,8 @@ Test file: 3:00 WAV PCM 16-bit stereo 44.1kHz converted to MP3 320kbps CBR with 
 320 MP3 Fast Encoder is distributed under a free-to-use freeware license.
 
 - Free to download and use.
-- Free for personal and professional audio work.
+- Free for personal, non-commercial use.
+- Paid, commercial, or professional use requires prior written authorization from OG Plugins.
 - No subscription, activation, ads, or hidden usage limits.
 - Files generated with the software belong to the user.
 - OG Plugins keeps the copyright, brand, installer, and official binaries.
@@ -69,6 +65,11 @@ The metadata editor can set Title, Artist, Album, Track, Year, Genre, BPM, Encod
 ### Privacy And Installer Notice
 
 The installer includes EULA and Privacy Notice screens. Standard installation and uninstallation telemetry may be collected as described in those documents.
+
+## Downloads
+
+- Windows Installer: [320FastEncodeR_Setup_1.0_Windows.exe](downloads/320FastEncodeR_Setup_1.0_Windows.exe)
+- macOS Installer: [320FastEncodeR_Installer_1.0_Mac.dmg](downloads/320FastEncodeR_Installer_1.0_Mac.dmg)
 
 ## Portugues
 
